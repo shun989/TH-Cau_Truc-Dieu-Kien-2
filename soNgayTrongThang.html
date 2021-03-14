@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính số ngày</title>
+</head>
+<body>
+<form>
+    <input type="number" id="date"/>
+    <input type="button" onclick="tinhsongay()" value="Tính số ngày"/>
+    <p id="display"></p>
+</form>
+<script>
+    function tinhsongay() {
+     let month = document.getElementById('date').value;
+     switch (month){
+         case '1':
+             document.getElementById('display').innerHTML = "Tháng 1 có 31 ngày!";
+             break;
+         case '3':
+             document.getElementById('display').innerHTML = "Tháng 3 có 31 ngày!";
+             break;
+         case '5':
+             document.getElementById('display').innerHTML = "Tháng 5 có 31 ngày!";
+             break;
+         case '7':
+             document.getElementById('display').innerHTML = "Tháng 7 có 31 ngày!";
+             break;
+         case '8':
+             document.getElementById('display').innerHTML = "Tháng 8 có 31 ngày!";
+             break;
+         case '10':
+             document.getElementById('display').innerHTML = "Tháng 10 có 31 ngày!";
+             break;
+         case '12':
+             document.getElementById('display').innerHTML = "Tháng 12 có 31 ngày!";
+             break;
+         case '4':
+             document.getElementById('display').innerHTML = "Tháng 4 có 30 ngày!";
+             break;
+         case '6':
+             document.getElementById('display').innerHTML = "Tháng 6 có 30 ngày!";
+             break;
+         case '9':
+             document.getElementById('display').innerHTML = "Tháng 9 có 30 ngày!";
+             break;
+         case '11':
+             document.getElementById('display').innerHTML = "Tháng 11 có 30 ngày!";
+             break;
+         case '2':
+             document.getElementById('display').innerHTML = "Tháng 2 có 28 hoặc 29 ngày!";
+             break;
+         default:
+             document.getElementById('display').innerText = 'Tháng bạn nhập không đúng!';
+     }
+    }
+</script>
+</body>
+</html>
