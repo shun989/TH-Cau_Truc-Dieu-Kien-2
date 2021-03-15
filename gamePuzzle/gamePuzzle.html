@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game Puzzle</title>
+</head>
+<style>
+    img {
+        width: 200px;
+    }
+</style>
+<body>
+<img id="anh1" src="anh/pic1.jpg" onclick="chuyenAnh(this.id)" alt="1">
+<img id="anh2" src="anh/pic2.jpg" onclick="chuyenAnh(this.id)" alt="2">
+<img id="anh3" src="anh/pic3.jpg" onclick="chuyenAnh(this.id)" alt="3">
+<img id="anh4" src="anh/pic4.jpg" onclick="chuyenAnh(this.id)" alt="4">
+<img id="anh5" src="anh/pic5.jpg" onclick="chuyenAnh(this.id)" alt="5">
+
+<script>
+    function chuyenAnh(id) {
+        let img= document.getElementById(id);
+        let alt= parseInt(img.alt);
+        (alt < 5) ? alt++ : alt = 1;
+        img.src = 'anh/pic'+alt+'.jpg';
+        img.alt = alt;
+        checkWin();
+    }
+    function checkWin() {
+        let anh1  = document.getElementById('anh1').alt;
+        let anh2  = document.getElementById('anh2').alt;
+        let anh3  = document.getElementById('anh3').alt;
+        let anh4  = document.getElementById('anh4').alt;
+        let anh5  = document.getElementById('anh5').alt;
+        if(anh1 === anh2 && anh2 === anh3 && anh3 === anh4 && anh4 === anh5){
+            setTimeout(function () {
+                alert("Win");
+            },100);
+
+        }
+    }
+</script>
+</body>
+</html>
